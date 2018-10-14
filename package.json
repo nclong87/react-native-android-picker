@@ -1,5 +1,5 @@
 {
-  "name": "react-picker-android",
+  "name": "react-native-android-picker",
   "version": "1.0.0",
   "description": "React native picker for android",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nclong87/react-picker-android.git"
+    "url": "git+https://github.com/nclong87/react-native-android-picker.git"
   },
   "keywords": [
     "react-native",
@@ -20,8 +20,8 @@
   "author": "nclong87",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nclong87/react-picker-android/issues"
+    "url": "https://github.com/nclong87/react-native-android-picker/issues"
   },
-  "homepage": "https://github.com/nclong87/react-picker-android#readme",
+  "homepage": "https://github.com/nclong87/react-native-android-picker#readme",
   "dependencies": {}
 }

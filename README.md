@@ -1,6 +1,6 @@
-# react-picker-android
-[![npm version](http://img.shields.io/npm/v/react-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-picker-android "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-picker-android "View this project on npm")
+# react-native-android-picker
+[![npm version](http://img.shields.io/npm/v/react-native-android-picker.svg?style=flat-square)](https://npmjs.org/package/react-native-android-picker "View this project on npm")
+[![npm version](http://img.shields.io/npm/dm/react-native-android-picker.svg?style=flat-square)](https://npmjs.org/package/react-native-android-picker "View this project on npm")
 
 ## Introduction
 Android Picker component based on React-native.
@@ -15,17 +15,17 @@ The android component is based on https://github.com/AigeStudio/WheelPicker whic
 Install component
 
 ```
-npm i react-picker-android --save
+npm i react-native-android-picker --save
 ```
 
 Add in settings.gradle
 ```
-include ':react-picker-android'
-project(':react-picker-android').projectDir = new File(settingsDir, '../node_modules/react-picker-android/android')
+include ':react-native-android-picker'
+project(':react-native-android-picker').projectDir = new File(settingsDir, '../node_modules/react-native-android-picker/android')
 ```
 Add in app/build.gradle
 ```
-compile project(':react-picker-android')
+compile project(':react-native-android-picker')
 ```
 Modify MainApplication
 ```
