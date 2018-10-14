@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * @author <a href="mailto:nclong87@gmail.com"> Long Nguyen </a>
  */
-public class ReactWheelStraightPickerManager extends SimpleViewManager<ReactWheelStraightPicker> {
+public class ReactWheelStraightPickerManager extends SimpleViewManager {
 
     private static final String REACT_CLASS = "WheelStraightPicker";
 
@@ -26,7 +26,7 @@ public class ReactWheelStraightPickerManager extends SimpleViewManager<ReactWhee
     private static final int DEFAULT_ITEM_SPACE = 14 * 2;
 
     @Override
-    protected ReactWheelStraightPicker createViewInstance(ThemedReactContext reactContext) {
+    protected WheelCrossPicker createViewInstance(ThemedReactContext reactContext) {
         ReactWheelStraightPicker picker = new ReactWheelStraightPicker(reactContext);
         picker.setTextColor(Color.LTGRAY);
         picker.setCurrentTextColor(Color.WHITE);

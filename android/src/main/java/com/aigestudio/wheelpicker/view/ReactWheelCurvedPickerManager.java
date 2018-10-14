@@ -86,6 +86,13 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
         }
     }
 
+    @ReactProp(name="lineStrokeWidth")
+    public void setLineStrokeWidth(ReactWheelCurvedPicker picker, int lineStrokeWidth) {
+        if (picker != null) {
+            picker.setLineStrokeWidth(lineStrokeWidth);
+        }
+    }
+
     @Override
     public String getName() {
         return REACT_CLASS;

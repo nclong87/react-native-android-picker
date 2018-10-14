@@ -99,7 +99,7 @@ public class ReactWheelStraightPicker extends WheelStraightPicker {
             canvas.save();
             canvas.clipRect(rectCurItem, Region.Op.DIFFERENCE);
             mPaint.setColor(textColor);
-            mPaint.setAlpha(255 - 255 * Math.abs(curDis) / unitDisplayMax);
+            mPaint.setAlpha(alpha);
             mPaint.setStrokeWidth(lineStrokeWidth);
             canvas.drawLine(0, lineY, lineStopX, lineY, mPaint);
             mTextPaint.setTextAlign(Paint.Align.RIGHT);

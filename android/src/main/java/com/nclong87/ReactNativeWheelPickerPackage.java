@@ -1,5 +1,7 @@
-package com.aigestudio.wheelpicker.view;
+package com.nclong87;
 
+import com.aigestudio.wheelpicker.view.ReactWheelCurvedPickerManager;
+import com.aigestudio.wheelpicker.view.ReactWheelStraightPickerManager;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -26,7 +28,8 @@ public class ReactNativeWheelPickerPackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Arrays.<ViewManager>asList(
-                new ReactWheelStraightPickerManager()
+                new ReactWheelStraightPickerManager(),
+                new ReactWheelCurvedPickerManager()
         );
     }
 }

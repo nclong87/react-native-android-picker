@@ -1,6 +1,6 @@
-# react-straight-picker-android
-[![npm version](http://img.shields.io/npm/v/react-straight-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-straight-picker-android "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-straight-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-straight-picker-android "View this project on npm")
+# react-picker-android
+[![npm version](http://img.shields.io/npm/v/react-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-picker-android "View this project on npm")
+[![npm version](http://img.shields.io/npm/dm/react-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-picker-android "View this project on npm")
 
 ## Introduction
 Android Picker component based on React-native.
@@ -8,28 +8,28 @@ Android Picker component based on React-native.
 Since picker is originally supported by ios while Android only supports a ugly Spinner component. If you want to have the same user behaviour, you can use this.
 
 The android component is based on https://github.com/AigeStudio/WheelPicker which runs super fast and smoothly. It also supports curved effect which make it exactly the same looking and feel as the ios picker.
-![](https://i.imgur.com/7ukJ6e1.png)
+![](https://i.imgur.com/7ukJ6e1.png) ![](https://i.imgur.com/Sb7AZ4I.png)
 
 ## How to use
 
 Install component
 
 ```
-npm i react-straight-picker-android --save
+npm i react-picker-android --save
 ```
 
 Add in settings.gradle
 ```
-include ':react-straight-picker-android'
-project(':react-straight-picker-android').projectDir = new File(settingsDir, '../node_modules/react-straight-picker-android/android')
+include ':react-picker-android'
+project(':react-picker-android').projectDir = new File(settingsDir, '../node_modules/react-picker-android/android')
 ```
 Add in app/build.gradle
 ```
-compile project(':react-straight-picker-android')
+compile project(':react-picker-android')
 ```
 Modify MainApplication
 ```
-    import com.aigestudio.wheelpicker.view.ReactNativeWheelPickerPackage;
+    import com.nclong87.ReactNativeWheelPickerPackage;
     ......
 
     protected List<ReactPackage> getPackages() {
@@ -50,8 +50,8 @@ import {
 } from 'react-native';
 
 
-import Picker from 'react-straight-picker-android'
-var PickerItem = Picker.Item;
+import { WheelCurvedPicker } from 'react-straight-picker-android';
+var PickerItem = WheelCurvedPicker.Item;
 
 export default class App extends Component<{}> {
 
@@ -75,14 +75,16 @@ export default class App extends Component<{}> {
 				<Text style={styles.welcome}>
 					Welcome to React Native!
 				</Text>
-				<Picker style={{width: 150, height: 180}}
+				<WheelCurvedPicker
+					style={{width: 70, height: 180}}
 					selectedValue={this.state.selectedItem}
 					itemStyle={{color:"white", fontSize:26}}
+					lineStrokeWidth={5}
 					onValueChange={(index) => this.onPickerSelect(index)}>
 						{this.state.itemList.map((value, i) => (
 							<PickerItem label={value} value={i} key={"money"+value}/>
 						))}
-				</Picker>
+				</WheelCurvedPicker>
 			</View>
 		);
 	}

@@ -1,7 +1,7 @@
 {
-  "name": "react-straight-picker-android",
+  "name": "react-picker-android",
   "version": "1.0.0",
-  "description": "React native straight picker for android",
+  "description": "React native picker for android",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -2,4 +2,9 @@
 
 import WheelStraightPicker from './WheelStraightPicker'
 
-module.exports = WheelStraightPicker;
+import WheelCurvedPicker from './WheelCurvedPicker'
+
+module.exports = {
+  WheelStraightPicker : WheelStraightPicker,
+  WheelCurvedPicker : WheelCurvedPicker
+}
