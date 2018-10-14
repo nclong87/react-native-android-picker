@@ -1,6 +1,6 @@
-# rn-straight-picker-android
-[![npm version](http://img.shields.io/npm/v/rn-straight-picker-android.svg?style=flat-square)](https://npmjs.org/package/rn-straight-picker-android "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/rn-straight-picker-android.svg?style=flat-square)](https://npmjs.org/package/rn-straight-picker-android "View this project on npm")
+# react-straight-picker-android
+[![npm version](http://img.shields.io/npm/v/react-straight-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-straight-picker-android "View this project on npm")
+[![npm version](http://img.shields.io/npm/dm/react-straight-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-straight-picker-android "View this project on npm")
 
 ## Introduction
 Android Picker component based on React-native.
@@ -15,17 +15,17 @@ The android component is based on https://github.com/AigeStudio/WheelPicker whic
 Install component
 
 ```
-npm i rn-straight-picker-android --save
+npm i react-straight-picker-android --save
 ```
 
 Add in settings.gradle
 ```
-include ':rn-straight-picker-android'
-project(':rn-straight-picker-android').projectDir = new File(settingsDir, '../node_modules/rn-straight-picker-android/android')
+include ':react-straight-picker-android'
+project(':react-straight-picker-android').projectDir = new File(settingsDir, '../node_modules/react-straight-picker-android/android')
 ```
 Add in app/build.gradle
 ```
-compile project(':rn-straight-picker-android')
+compile project(':react-straight-picker-android')
 ```
 Modify MainApplication
 ```
@@ -50,7 +50,7 @@ import {
 } from 'react-native';
 
 
-import Picker from 'rn-straight-picker-android'
+import Picker from 'react-straight-picker-android'
 var PickerItem = Picker.Item;
 
 export default class App extends Component<{}> {
