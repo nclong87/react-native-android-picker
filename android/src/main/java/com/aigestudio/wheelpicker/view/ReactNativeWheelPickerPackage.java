@@ -1,4 +1,4 @@
-package com.zyu;
+package com.aigestudio.wheelpicker.view;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author <a href="mailto:lesliesam@hotmail.com"> Sam Yu </a>
+ * @author <a href="mailto:nclong87@gmail.com"> Long Nguyen </a>
  */
 public class ReactNativeWheelPickerPackage implements ReactPackage {
     @Override
@@ -26,7 +26,7 @@ public class ReactNativeWheelPickerPackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Arrays.<ViewManager>asList(
-                new ReactWheelCurvedPickerManager()
+                new ReactWheelStraightPickerManager()
         );
     }
 }

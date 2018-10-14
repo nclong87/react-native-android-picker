@@ -10,8 +10,8 @@ import {
 
 const defaultItemStyle = { color: 'white', fontSize: 26 };
 
-const WheelCurvedPickerNativeInterface = {
-	name: 'WheelCurvedPicker',
+const WheelStraightPickerNativeInterface = {
+	name: 'WheelStraightPicker',
 	propTypes: {
 		...View.propTypes,
 		data:PropTypes.array,
@@ -22,12 +22,14 @@ const WheelCurvedPickerNativeInterface = {
 		onValueChange: PropTypes.func,
 		selectedValue: PropTypes.any,
 		selectedIndex: PropTypes.number,
+		lineStrokeWidth: PropTypes.number,
 	}
 }
 
-const WheelCurvedPickerNative = requireNativeComponent('WheelCurvedPicker', WheelCurvedPickerNativeInterface);
+const WheelStraightPickerNative = requireNativeComponent('WheelStraightPicker', WheelStraightPickerNativeInterface);
 
-class WheelCurvedPicker extends React.Component {
+
+class WheelStraightPicker extends React.Component {
 
 	propTypes: {
 		...View.propTypes,
@@ -47,6 +49,8 @@ class WheelCurvedPicker extends React.Component {
 		selectedValue: PropTypes.any,
 
 		selectedIndex: PropTypes.number,
+
+		lineStrokeWidth: PropTypes.number,
 	}
 
 	constructor(props){
@@ -56,7 +60,8 @@ class WheelCurvedPicker extends React.Component {
 
 	static defaultProps = {
 		itemStyle : {color:"white", fontSize:26},
-		itemSpace: 20
+		itemSpace: 20,
+		lineStrokeWidth: 5,
 	}
 
 	componentWillReceiveProps (props) {
@@ -86,7 +91,7 @@ class WheelCurvedPicker extends React.Component {
 	}
 
 	render() {
-		return <WheelCurvedPickerNative
+		return <WheelStraightPickerNative
 				{...this.props}
 				onValueChange={this._onValueChange}
 				data={this.state.items}
@@ -108,6 +113,6 @@ class Item extends React.Component {
 	}
 }
 
-WheelCurvedPicker.Item = Item;
+WheelStraightPicker.Item = Item;
 
-module.exports = WheelCurvedPicker;
+module.exports = WheelStraightPicker;

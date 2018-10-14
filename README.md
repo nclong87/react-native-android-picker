@@ -1,15 +1,14 @@
-# react-native-wheel-picker
-[![npm version](http://img.shields.io/npm/v/react-native-wheel-picker.svg?style=flat-square)](https://npmjs.org/package/react-native-wheel-picker "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-native-wheel-picker.svg?style=flat-square)](https://npmjs.org/package/react-native-wheel-picker "View this project on npm")
+# react-native-picker-android
+[![npm version](http://img.shields.io/npm/v/react-native-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-native-picker-android "View this project on npm")
+[![npm version](http://img.shields.io/npm/dm/react-native-picker-android.svg?style=flat-square)](https://npmjs.org/package/react-native-picker-android "View this project on npm")
 
 ## Introduction
-Cross platform Picker component based on React-native.
+Android Picker component based on React-native.
 
 Since picker is originally supported by ios while Android only supports a ugly Spinner component. If you want to have the same user behaviour, you can use this.
 
 The android component is based on https://github.com/AigeStudio/WheelPicker which runs super fast and smoothly. It also supports curved effect which make it exactly the same looking and feel as the ios picker.
-![](https://raw.githubusercontent.com/lesliesam/react-native-wheel-picker/master/demo.gif)
-![](https://raw.githubusercontent.com/lesliesam/react-native-wheel-picker/master/demo_android.gif)
+![](https://i.imgur.com/7ukJ6e1.png)
 
 ## How to use
 
@@ -17,29 +16,27 @@ Run command
 
 For apps using RN 0.40 or higher, please run
 ```
-npm i react-native-wheel-picker --save
+npm i react-native-picker-android --save
 ```
-For apps using RN 0.39 or less, please run
-```
-npm install --save --save-exact react-native-wheel-picker@1.1.2
-```
+
 Add in settings.gradle
 ```
-include ':react-native-wheel-picker'
-project(':react-native-wheel-picker').projectDir = new File(settingsDir, '../node_modules/react-native-wheel-picker/android')
+include ':react-native-picker-android'
+project(':react-native-picker-android').projectDir = new File(settingsDir, '../node_modules/react-native-picker-android/android')
 ```
 Add in app/build.gradle
 ```
-compile project(':react-native-wheel-picker')
+compile project(':react-native-picker-android')
 ```
 Modify MainApplication
 ```
-    import com.zyu.ReactNativeWheelPickerPackage;
+    import com.aigestudio.wheelpicker.view.ReactNativeWheelPickerPackage;
     ......
 
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
-            new MainReactPackage(), new ReactNativeWheelPickerPackage()
+            new MainReactPackage(),
+						new ReactNativeWheelPickerPackage()
         );
     }
 ```
@@ -55,7 +52,7 @@ import {
 } from 'react-native';
 
 
-import Picker from 'react-native-wheel-picker'
+import Picker from 'react-native-picker-android'
 var PickerItem = Picker.Item;
 
 export default class App extends Component<{}> {
@@ -64,23 +61,13 @@ export default class App extends Component<{}> {
 		super(props);
 		this.state = {
 			selectedItem : 2,
-			itemList: ['刘备', '张飞', '关羽', '赵云', '黄忠', '马超', '魏延', '诸葛亮']
+			itemList: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 		};
 	}
 
 	onPickerSelect (index) {
 		this.setState({
 			selectedItem: index,
-		})
-	}
-
-	onAddItem = () => {
-		var name = '司马懿'
-		if (this.state.itemList.indexOf(name) == -1) {
-			this.state.itemList.push(name)
-		}
-		this.setState({
-			selectedItem: this.state.itemList.indexOf(name),
 		})
 	}
 
@@ -98,14 +85,6 @@ export default class App extends Component<{}> {
 							<PickerItem label={value} value={i} key={"money"+value}/>
 						))}
 				</Picker>
-				<Text style={{margin: 20, color: '#ffffff'}}>
-					你最喜欢的是：{this.state.itemList[this.state.selectedItem]}
-				</Text>
-
-				<Text style={{margin: 20, color: '#ffffff'}}
-						onPress={this.onAddItem}>
-			怎么没有司马懿？
-				</Text>
 			</View>
 		);
 	}
@@ -117,17 +96,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: '#1962dd',
-	},
-	welcome: {
-		fontSize: 20,
-		textAlign: 'center',
-		margin: 10,
-		color: '#ffffff',
-	},
-	instructions: {
-		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
 	},
 });
 ```

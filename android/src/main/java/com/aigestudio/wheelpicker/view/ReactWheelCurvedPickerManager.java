@@ -1,4 +1,4 @@
-package com.zyu;
+package com.aigestudio.wheelpicker.view;
 
 import android.graphics.Color;
 
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 /**
- * @author <a href="mailto:lesliesam@hotmail.com"> Sam Yu </a>
+ * @author <a href="mailto:nclong87@gmail.com"> Long Nguyen </a>
  */
 public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelCurvedPicker> {
 
@@ -31,7 +31,6 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
         picker.setCurrentTextColor(Color.WHITE);
         picker.setTextSize(DEFAULT_TEXT_SIZE);
         picker.setItemSpace(DEFAULT_ITEM_SPACE);
-
         return picker;
     }
 
