@@ -34,8 +34,7 @@ Modify MainApplication
 
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
-            new MainReactPackage(),
-						new ReactNativeWheelPickerPackage()
+            new MainReactPackage(), new ReactNativeWheelPickerPackage()
         );
     }
 ```
