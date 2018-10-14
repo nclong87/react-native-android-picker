@@ -12,9 +12,8 @@ The android component is based on https://github.com/AigeStudio/WheelPicker whic
 
 ## How to use
 
-Run command
+Install component
 
-For apps using RN 0.40 or higher, please run
 ```
 npm i react-native-picker-android --save
 ```
