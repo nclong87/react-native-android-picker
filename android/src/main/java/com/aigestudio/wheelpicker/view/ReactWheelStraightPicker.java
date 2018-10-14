@@ -129,7 +129,7 @@ public class ReactWheelStraightPicker extends WheelStraightPicker {
     protected void drawForeground(Canvas canvas) {
         super.drawForeground(canvas);
 
-        Paint paint = new Paint();
+        /* Paint paint = new Paint();
         paint.setColor(Color.WHITE);
         int colorFrom = 0x00FFFFFF;//Color.BLACK;
         int colorTo = Color.WHITE;
@@ -137,6 +137,7 @@ public class ReactWheelStraightPicker extends WheelStraightPicker {
         paint.setShader(linearGradientShader);
         canvas.drawLine(rectCurItem.left, rectCurItem.top, rectCurItem.right, rectCurItem.top, paint);
         canvas.drawLine(rectCurItem.left, rectCurItem.bottom, rectCurItem.right, rectCurItem.bottom, paint);
+        */
     }
 
     @Override

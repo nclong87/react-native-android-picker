@@ -8,7 +8,7 @@ Android Picker component based on React-native.
 Since picker is originally supported by ios while Android only supports a ugly Spinner component. If you want to have the same user behaviour, you can use this.
 
 The android component is based on https://github.com/AigeStudio/WheelPicker which runs super fast and smoothly. It also supports curved effect which make it exactly the same looking and feel as the ios picker.
-![](https://i.imgur.com/7ukJ6e1.png) ![](https://i.imgur.com/Sb7AZ4I.png)
+![](https://i.imgur.com/r6hykCY.png) ![](https://i.imgur.com/xgpTMfo.png)
 
 ## How to use
 
@@ -50,8 +50,9 @@ import {
 } from 'react-native';
 
 
-import { WheelCurvedPicker } from 'react-straight-picker-android';
-var PickerItem = WheelCurvedPicker.Item;
+// import { WheelStraightPicker as PickerAndroid } from 'react-straight-picker-android';
+import { WheelCurvedPicker as PickerAndroid } from 'react-straight-picker-android';
+var PickerItem = PickerAndroid.Item;
 
 export default class App extends Component<{}> {
 
@@ -73,9 +74,9 @@ export default class App extends Component<{}> {
 		return (
 			<View style={styles.container}>
 				<Text style={styles.welcome}>
-					Welcome to React Native!
+					WheelCurvedPicker
 				</Text>
-				<WheelCurvedPicker
+				<PickerAndroid
 					style={{width: 70, height: 180}}
 					selectedValue={this.state.selectedItem}
 					itemStyle={{color:"white", fontSize:26}}
@@ -84,7 +85,7 @@ export default class App extends Component<{}> {
 						{this.state.itemList.map((value, i) => (
 							<PickerItem label={value} value={i} key={"money"+value}/>
 						))}
-				</WheelCurvedPicker>
+				</PickerAndroid>
 			</View>
 		);
 	}
@@ -92,10 +93,16 @@ export default class App extends Component<{}> {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#1962dd',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#1962dd',
+  },
+  welcome: {
+		fontSize: 40,
+		textAlign: 'center',
+		margin: 10,
+		color: '#ffffff',
 	},
 });
 ```
