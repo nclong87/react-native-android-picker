@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nclong87/react-native-picker-android.git"
+    "url": "git+https://github.com/nclong87/react-picker-android.git"
   },
   "keywords": [
     "react-native",
@@ -20,8 +20,8 @@
   "author": "nclong87",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nclong87/react-native-picker-android/issues"
+    "url": "https://github.com/nclong87/react-picker-android/issues"
   },
-  "homepage": "https://github.com/nclong87/react-native-picker-android#readme",
+  "homepage": "https://github.com/nclong87/react-picker-android#readme",
   "dependencies": {}
 }
