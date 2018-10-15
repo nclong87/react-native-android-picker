@@ -1,6 +1,5 @@
 # react-native-android-picker
 [![npm version](http://img.shields.io/npm/v/react-native-android-picker.svg?style=flat-square)](https://npmjs.org/package/react-native-android-picker "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-native-android-picker.svg?style=flat-square)](https://npmjs.org/package/react-native-android-picker "View this project on npm")
 [![react-native-android-picker](http://img.shields.io/npm/dm/react-native-android-picker.svg)](https://www.npmjs.com/package/react-native-android-picker)
 
 ## Introduction
